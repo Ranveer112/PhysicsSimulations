@@ -6,8 +6,6 @@ int x=1100;
 int y=0;
 //float planet_mass=1
 //float moon_mass=1/6.67430*10^(−11)
-float acc_x=1/(300-x)^2;
-float acc_y=1/(300-y)^2;
 float vx=10;
 float vy=1;
 
@@ -20,8 +18,8 @@ void setup(){
 void draw(){
    background(200);
    circle(300, 300, 100);
-      vx+=acc_x*(Math.abs(300-x))/(300-x);//direction of gravitational force
-      vy+=acc_y*(Math.abs(300-y))/(300-y);//direction of gravitational force
+      vx+=(1/(300-x)^2)*(Math.abs(300-x))/(300-x);//direction of gravitational force
+      vy+=(1/(300-y)^2)*(Math.abs(300-y))/(300-y);//direction of gravitational force
       y+=vy;
       x+=vx;
       circle(x, y, 30);
