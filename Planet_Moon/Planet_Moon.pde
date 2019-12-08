@@ -18,10 +18,10 @@ void setup(){
 void draw(){
    background(200);
    circle(300, 300, 100);
-      vx+=(1/(300-x)^2)*(Math.abs(300-x))/(300-x);//direction of gravitational force
-      vy+=(1/(300-y)^2)*(Math.abs(300-y))/(300-y);//direction of gravitational force
-      y+=vy;
-      x+=vx;
-      circle(x, y, 30);
+   vx+=(1/(300-x)^2)*(Math.abs(300-x))/(300-x);//direction of gravitational force
+   vy+=(1/(300-y)^2)*(Math.abs(300-y))/(300-y);//direction of gravitational force
+   y+=vy;
+   x+=vx;
+   circle(x, y, 30);
     
 }
